@@ -1,0 +1,46 @@
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 2px dotted black;
+}
+
+#main-title {
+  text-align: center;
+}
+
+nav li {
+  list-style: none;
+  display: inline-block;
+}
+
+cite {
+  font-size: .8em;
+  color: gray;
+
+}
+cite a {
+  color: gray;
+  text-decoration: none;
+}
+
+cite a:hover{
+  text-decoration: underline;
+}
+
+.new-user-form {
+  text-align: center;
+}
+
+.post-display {
+  text-align: center;
+  font-size: 1.5em;
+  /*background-color: cyan;*/
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px dashed lightgreen;
+}
+
+.section-title {
+  text-align: center;
+}

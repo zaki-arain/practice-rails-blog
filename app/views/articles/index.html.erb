@@ -1,0 +1,17 @@
+<h1>Welcome to my blog!</h1>
+
+<table>
+  <tr>
+    <th>Entries</th>
+  </tr>
+
+  <% @articles.each do |article| %>
+    <div>
+      <h3><%=link_to article.title, article_path(article)  %></h3>
+      <%= article.text %>
+      <cite><%= link_to 'Edit', edit_article_path(article) %> | <%= link_to 'Delete', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></cite>
+    </div>
+  <% end %>
+</table>
