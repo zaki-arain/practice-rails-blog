@@ -7,17 +7,21 @@ jobs:
     docker:
       - image: circleci/ruby:2.6.3-stretch-node
     executor: ruby/default
-    parallelism: 4
     steps:
       - run:
-          name: echo 4?
-          command: sleep 4; echo "first"
+          name: build step echo
+          command: echo "first"
+  foo:
+    docker:
+      - image: circleci/ruby:2.6.3-stretch-node
+    executor: ruby/default
+    steps:
       - run:
-          name: echo 3?
-          command: sleep 3; echo "second"
-      - run:
-          name: echo 2?
-          command: sleep 2; echo "third"
-      - run:
-          name: echo 1?
-          command: sleep 1; echo "fourth"
+          name: echo foo
+          command: echo "foooo"
+
+workflows:
+  build_and_foo:
+    jobs:
+      - build
+      - foo
