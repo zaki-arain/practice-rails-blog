@@ -1,0 +1,23 @@
+version: 2.1
+orbs:
+  ruby: circleci/ruby@0.1.2 
+
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.6.3-stretch-node
+    executor: ruby/default
+    parallelism: 4
+    steps:
+      - run:
+          name: echo 4?
+          command: sleep 4; echo "first"
+      - run:
+          name: echo 3?
+          command: sleep 3; echo "first"
+      - run:
+          name: echo 2?
+          command: sleep 2; echo "first"
+      - run:
+          name: echo 1?
+          command: sleep 1; echo "first"
